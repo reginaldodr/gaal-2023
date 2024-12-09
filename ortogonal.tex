@@ -1,0 +1,115 @@
+\section{Ortogonalidade}
+
+\subsection*{Vetores Ortogonais}
+
+\begin{frame}[label=orto]{Vetores Ortogonais}
+\begin{exer}
+Considere os vetores $\vec{v}_1=(2,1,-1)$, $\vec{v}_2=(1,0,2)$ e $\vec{v}_3=(2,-5,-1)$. 
+
+\begin{enumerate}
+\item Mostre que os três vetores são ortogonais dois a dois.
+
+\item Use esse fato para mostrar que os vetores são LI, isto é, a equação vetorial 
+\[x\vec{v}_1+y\vec{v}_2+z\vec{v}_3=\vec{0},\]
+{\color{red}só possui} a solução trivial $x=y=z=0$.
+
+\item Escreva  $\vec{v}=(3,-1,1)$ como combinação linear da base $\mathcal{B}=\{\vec{v}_1,\vec{v}_2,\vec{v}_3\}$.
+\end{enumerate}
+\end{exer}
+
+\end{frame}
+
+\begin{frame}[label=orto]{}
+\begin{defin}
+Um conjunto de vetores $\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v_k}\}\subset \R^n$ é dito {\color{blue}ortogonal} se todos os vetores são ortogonais dois a dois, isto é,
+\[\vec{v}_i\cdot \vec{v}_j=0,\ \forall i,j=1,2,\ldots k, \ i\neq j.\]
+E dizemos que {\color{blue}ortonormal} se além de ortogonal cada vetor for unitário, isto é, 
+\[\|\vec{v}_i\|=1,\ \forall i=1,2,\ldots,k.\]
+Neste caso, escrevemos também
+\[
+\vec{v}_i\cdot \vec{v}_j=\delta_{ij}
+\begin{cases}
+1, & i=j\\ 0, & i\neq j
+\end{cases}, \ \forall i,j=1,2,\ldots,k
+\]
+onde $\delta_{ij}$ é o chamado {\color{blue}Delta de Kronecker}.
+\end{defin}
+
+\end{frame}
+
+\begin{frame}[label=orto]{}
+\begin{teo}
+Se $\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}$  de $\R^n$  é ortogonal, então esses vetores são LI. Além disso, se
+\[\vec{v}=c_1\vec{v}_1+c_2\vec{v}_2+\cdot +c_k\vec{v}_k,\]
+então
+\[c_i=\frac{\vec{v}\cdot \vec{v}_i}{\|\vec{v}_i\|^2}\] 
+\end{teo}
+
+\begin{defin}
+Definimos a {\color{blue}projeção ortogonal} de um $\vec{v}$ sobre um vetor  {\color{red} não nulo} $\vec{w}$ como sendo o seguinte vetor
+\[\proj_{\vec{w}}\vec{v}=\left(\frac{\vec{v}\cdot \vec{w}}{\|\vec{w}\|^2}\right)\vec{w}.\]
+\end{defin}
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[label=orto]{Processo de Ortogonalização de Gram-Schimidt}
+\begin{prop}
+Seja $\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}$ um conjunto ortogonal  de $\R^n$. Então, para qualquer $\vec{v}\in \R^n$, temos que
+\[\vec{v}-\proj_{{\vec{v}_1}}\vec{v}-\proj_{{\vec{v}_2}}\vec{v}-\cdots-\proj_{{\vec{v}_k}}\vec{v}\]
+é ortogonal a cada $\vec{v}_i$, onde $i=1,2,\ldots,k$.
+\end{prop}
+
+\begin{exe}
+Determine uma base ortogonal para o subespaço de $\R^5$ gerado por
+\[\vec{v}_1=(-1,0,-1,0,1),\ \vec{v}_2=(0,0,1,1,0),\ \vec{v}_3=(-1,1,0,0,0).\]
+\end{exe}
+\end{frame}
+
+
+\begin{frame}[label=orto]{}
+
+\begin{casa}
+Determine uma base ortogonal para o subespaço de $\R^4$ gerado por
+\[\vec{v}_1=(1,-1,-1,1),\ \vec{v}_2=(2,1,0,1),\ \vec{v}_3=(2,2,1,2).\]
+\end{casa}
+\end{frame}
+
+
+
+
+
+
+\subsection*{Coordenadas em relação a uma base de $\R^n$}
+\begin{frame}[label=lild]{Coordenadas em relação a uma base}
+Se ${\color{red}\mathcal{B}=\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_n\}}$ é uma base de $\R^n$, então cada vetor $\vec{v}\in \R^n$ pode ser escrito de forma única como
+\[\vec{v}={\color{blue}c_1}{\color{red}\vec{v}_1}+{\color{blue}c_2}{\color{red}\vec{v}_2}+\cdots+{\color{blue}c_n}{\color{red}\vec{v}_n}.\]
+Neste caso, dizemos que esta é a {\color{blue}expressão de $\vec{v}$ em termos da base $\mathcal{B}$}. Os escalares {\color{blue}$c_1,c_2,\ldots,c_n$} são chamados de {\color{blue}coordenadas} de $\vec{v}$ em relação à base $\mathcal{B}$ e escrevemos 
+\[
+[\vec{v}]_{{\color{red}\mathcal{B}}}=
+{\color{blue}(c_1,c_2,\ldots,c_n)}_{{\color{red}\mathcal{B}}} \text{ ou }
+[\vec{v}]_{{\color{red}\mathcal{B}}}=
+{\color{blue}
+\begin{bmatrix}
+c_1 \\ c_2 \\ \vdots \\ c_n
+\end{bmatrix}_{{\color{red}\mathcal{B}}}},
+\]
+chamado {\color{blue}vetor de coordenadas em relação à base $\mathcal{B}$}.
+
+\end{frame}
+
+\begin{frame}[label=lild]{}
+\begin{exe}
+\begin{enumerate}
+%\item Determine as coordenadas do vetor $\vec{v}=(-1,2,1)$ em relação à base $\mathcal{B}=\{(1,0,1),(0,1,1)\}$ do espaço gerado por $\mathcal{B}$.
+
+\item Determine as coordenadas do vetor $\vec{v}=(2,-1,3)$ em relação à base canônica do $\R^3$, $\mathcal{C}=\{\vec{e}_1,\vec{e}_2,\vec{e}_3\}$.
+
+\item Mostre que $\mathcal{B}=\{(1,2,1),(2,9,0),(3,3,4)\}$ é uma base de $\R^3$. Em seguida, encontre o vetor de coordenadas de $\vec{v}=(5,-1,9)$ em relação a essa base.
+\end{enumerate}
+\end{exe}
+\end{frame}
