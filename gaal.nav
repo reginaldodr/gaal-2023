@@ -455,18 +455,35 @@
 \headcommand {\beamer@framepages {177}{177}}
 \headcommand {\slideentry {11}{1}{3}{178/178}{Vetores Ortogonais}{0}}
 \headcommand {\beamer@framepages {178}{178}}
-\headcommand {\slideentry {11}{1}{4}{179/179}{Vetores Ortogonais}{0}}
+\headcommand {\beamer@subsectionpages {176}{178}}
+\headcommand {\beamer@subsectionentry {0}{11}{2}{179}{Processo de ortonalização de Gram-Schmidt}}
+\headcommand {\slideentry {11}{2}{1}{179/179}{Processo de ortonalização de Gram-Schmidt}{0}}
 \headcommand {\beamer@framepages {179}{179}}
-\headcommand {\slideentry {11}{1}{5}{180/180}{Vetores Ortogonais}{0}}
+\headcommand {\slideentry {11}{2}{2}{180/180}{Processo de ortonalização de Gram-Schmidt}{0}}
 \headcommand {\beamer@framepages {180}{180}}
-\headcommand {\beamer@subsectionpages {176}{180}}
-\headcommand {\beamer@subsectionentry {0}{11}{2}{181}{Coordenadas em relação a uma base de $\mathbb {R}^n$}}
-\headcommand {\slideentry {11}{2}{1}{181/181}{Coordenadas em relação a uma base de $\mathbb {R}^n$}{0}}
+\headcommand {\beamer@sectionpages {175}{180}}
+\headcommand {\beamer@subsectionpages {179}{180}}
+\headcommand {\sectionentry {12}{Diagonalilzação de Matrizes Simétricas}{181}{Diagonalilzação de Matrizes Simétricas}{0}}
+\headcommand {\slideentry {12}{0}{1}{181/181}{}{0}}
 \headcommand {\beamer@framepages {181}{181}}
-\headcommand {\slideentry {11}{2}{2}{182/182}{Coordenadas em relação a uma base de $\mathbb {R}^n$}{0}}
+\headcommand {\beamer@subsectionpages {181}{181}}
+\headcommand {\beamer@subsectionentry {0}{12}{1}{182}{Matrizes Ortogonais}}
+\headcommand {\slideentry {12}{1}{1}{182/182}{Matrizes Ortogonais}{0}}
 \headcommand {\beamer@framepages {182}{182}}
-\headcommand {\beamer@partpages {1}{182}}
-\headcommand {\beamer@subsectionpages {181}{182}}
-\headcommand {\beamer@sectionpages {175}{182}}
-\headcommand {\beamer@documentpages {182}}
-\headcommand {\gdef \inserttotalframenumber {173}}
+\headcommand {\slideentry {12}{1}{2}{183/183}{Matrizes Ortogonais}{0}}
+\headcommand {\beamer@framepages {183}{183}}
+\headcommand {\beamer@subsectionpages {182}{183}}
+\headcommand {\beamer@subsectionentry {0}{12}{2}{184}{Teorema Espectral}}
+\headcommand {\slideentry {12}{2}{1}{184/184}{Teorema Espectral}{0}}
+\headcommand {\beamer@framepages {184}{184}}
+\headcommand {\beamer@subsectionpages {184}{184}}
+\headcommand {\beamer@subsectionentry {0}{12}{3}{185}{Coordenadas em relação a uma base de $\mathbb {R}^n$}}
+\headcommand {\slideentry {12}{3}{1}{185/185}{Coordenadas em relação a uma base de $\mathbb {R}^n$}{0}}
+\headcommand {\beamer@framepages {185}{185}}
+\headcommand {\slideentry {12}{3}{2}{186/186}{Coordenadas em relação a uma base de $\mathbb {R}^n$}{0}}
+\headcommand {\beamer@framepages {186}{186}}
+\headcommand {\beamer@partpages {1}{186}}
+\headcommand {\beamer@subsectionpages {185}{186}}
+\headcommand {\beamer@sectionpages {181}{186}}
+\headcommand {\beamer@documentpages {186}}
+\headcommand {\gdef \inserttotalframenumber {177}}

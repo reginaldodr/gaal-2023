@@ -27,7 +27,7 @@ E dizemos que {\color{blue}ortonormal} se além de ortogonal cada vetor for unit
 \[\|\vec{v}_i\|=1,\ \forall i=1,2,\ldots,k.\]
 Neste caso, escrevemos também
 \[
-\vec{v}_i\cdot \vec{v}_j=\delta_{ij}
+\vec{v}_i\cdot \vec{v}_j=\delta_{ij}=
 \begin{cases}
 1, & i=j\\ 0, & i\neq j
 \end{cases}, \ \forall i,j=1,2,\ldots,k
@@ -53,22 +53,62 @@ Definimos a {\color{blue}projeção ortogonal} de um $\vec{v}$ sobre um vetor  {
 
 \end{frame}
 
+%\begin{frame}[label=orto]{Processo de Ortogonalização de Gram-Schimidt}
+%\begin{prop}
+%Seja $\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}$ um conjunto ortogonal  de $\R^n$. Então, para qualquer $\vec{v}\in \R^n$, temos que
+%\[\vec{v}-\proj_{{\vec{v}_1}}\vec{v}-\proj_{{\vec{v}_2}}\vec{v}-\cdots-\proj_{{\vec{v}_k}}\vec{v}\]
+%é ortogonal a cada $\vec{v}_i$, onde $i=1,2,\ldots,k$.
+%\end{prop}
+%
+%\begin{exe}
+%Determine uma base ortogonal para o subespaço de $\R^5$ gerado por
+%\[\vec{v}_1=(-1,0,-1,0,1),\ \vec{v}_2=(0,0,1,1,0),\ \vec{v}_3=(-1,1,0,0,0).\]
+%\end{exe}
+%\end{frame}
 
 
+\subsection*{Processo de ortonalização de Gram-Schmidt}
+%\begin{frame}[label=orto]{Processo de ortonalização de Gram-Schmidt}
+%\begin{prop}
+%Seja $\{\vec{w}_1,\vec{w}_2,\ldots, \vec{w}_k\}$ um {\color{blue}conjunto 
+%ortogonal}  de $\R^n$. Então, para qualquer ${\color{red}\vec{v}}\in \R^n$,
+% temos que
+%\[\vec{w}={\color{red}\vec{v}}-\proj_{{\vec{w}_1}}{\color{red}\vec{v}}
+%-\proj_{{\vec{w}_2}}{\color{red}\vec{v}}-\cdots-\
+%\proj_{{\vec{w}_k}}{\color{red}\vec{v}}\]
+%é ortogonal a cada $\vec{w}_i$, onde $i=1,2,\ldots,k$. Além disso, $\vec{w}$ 
+%está no mesmo espaço gerado por $\{\vec{w}_1,\vec{w}_2,\ldots, \vec{w}_k,{\color{red}\vec{v}}\}$.
+%\end{prop}
+%
+%
+%\begin{exe}
+%Sejam $W$ o subespaço gerado por $\vec{v}_1=(1,-1,-1,1)$ e $\vec{v}_2=(2,1,0,1)$. Obtenha uma base ortogonal para $W$.
+%\end{exe}
+%\end{frame}
 
 
-\begin{frame}[label=orto]{Processo de Ortogonalização de Gram-Schimidt}
-\begin{prop}
-Seja $\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}$ um conjunto ortogonal  de $\R^n$. Então, para qualquer $\vec{v}\in \R^n$, temos que
-\[\vec{v}-\proj_{{\vec{v}_1}}\vec{v}-\proj_{{\vec{v}_2}}\vec{v}-\cdots-\proj_{{\vec{v}_k}}\vec{v}\]
-é ortogonal a cada $\vec{v}_i$, onde $i=1,2,\ldots,k$.
-\end{prop}
+\begin{frame}[label=orto]{Processo de ortonalização de Gram-Schmidt}
+Seja $\{v_1,v_2,\ldots, v_k \}$ uma base para um subespaço $W$ de $\R^n$. 
+Podemos obter uma base ortogonal para $W$ através do seguinte processo, conhecido como {\color{blue}Processo de Ortogonalização de Gram-Schmidt}.
+\begin{align*}
+& \vec{w}_1=\vec{v}_1,\\
+& \vec{w}_2=\vec{v}_2-\proj_{{\vec{w}_1}}\vec{v}_2,\\
+& \vec{w}_3=\vec{v}_3-\proj_{{\vec{w}_1}}\vec{v}_3
+-\proj_{{\vec{w}_2}}\vec{v}_3,\\
+& \vdots\\
+& \vec{w}_k=\vec{v}_k-\proj_{{\vec{w}_1}}\vec{v}_k
+-\proj_{{\vec{w}_2}}\vec{v}_k-\cdots-\proj_{{\vec{w}_{k-1}}}\vec{v}_k
+\end{align*}
+
 
 \begin{exe}
 Determine uma base ortogonal para o subespaço de $\R^5$ gerado por
 \[\vec{v}_1=(-1,0,-1,0,1),\ \vec{v}_2=(0,0,1,1,0),\ \vec{v}_3=(-1,1,0,0,0).\]
 \end{exe}
+
 \end{frame}
+
+
 
 
 \begin{frame}[label=orto]{}
@@ -81,6 +121,76 @@ Determine uma base ortogonal para o subespaço de $\R^4$ gerado por
 
 
 
+\section{Diagonalilzação de Matrizes Simétricas}
+
+
+\subsection*{Matrizes Ortogonais}
+\begin{frame}[label=orto]{Matrizes Ortogonais}
+
+\begin{defin}
+Uma matriz quadrada $Q$ cujas colunas formam um conjunto ortonormal é chamada 
+de \dt{matriz ortogonal}.
+\end{defin}
+
+\begin{teo}
+Seja $Q$ uma matriz $m\times n$. Suas colunas formam um conjunto ortogonal se, 
+e somente se, $Q^TQ=I_n$. Em particular, $Q$ é ortogonal se, e somente se, $Q^{-1}=Q^T$.
+\end{teo}
+
+\begin{exe}
+Mostre que  a seguinte matriz de rotação é ortogonal.
+\[R_\theta= 
+\begin{bmatrix}
+\cos(\theta) & -\sen(\theta)\\
+\sen(\theta) & \cos(\theta)
+\end{bmatrix}
+\]
+\end{exe}
+
+\end{frame}
+
+
+\begin{frame}[label=orto]{}
+
+\begin{exe}
+Mostre que  a seguinte matriz é diagonalizável
+\[A=
+\begin{bmatrix}
+1& 2\\ 2 & -2
+\end{bmatrix}.
+\]
+Em seguida, obtenha $Q$ ortogonal que diagonalize $A$.
+\end{exe}
+
+\begin{defin}
+Uma matriz quadrada $A$ é \dt{ortogonalmente diagonalizável} se é 
+diagonalizável e a matriz $Q$ que a diagonaliza é ortogonal.
+\end{defin}
+
+\begin{prop}
+Se $A$ é uma matriz simétrica, então os autovetores associados a autovalores distintos são ortogonais.
+\end{prop}
+
+\end{frame}
+
+\subsection*{Teorema Espectral}
+
+\begin{frame}[label=orto]{}
+
+\begin{block}{Teorema Espectral}
+Uma matriz  $A$ quadrada com entradas reais  é ortogonalmente diagonalizável se, e somente se, $A$ é simétrica.
+\end{block}
+
+\begin{exe}
+Encontre  uma diagonalização ortogonal para a matriz
+\[A=
+\begin{bmatrix}
+1 & 2 & 1\\ 1& 2 & 1 \\ 1 & 1 & 2
+\end{bmatrix}
+\]
+\end{exe}
+
+\end{frame}
 
 
 

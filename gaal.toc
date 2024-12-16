@@ -10,3 +10,4 @@
 \beamer@sectionintoc {9}{Subespaços, Base e Dimensão}{139}{0}{9}
 \beamer@sectionintoc {10}{Autovetores e Autovalores}{163}{0}{10}
 \beamer@sectionintoc {11}{Ortogonalidade}{175}{0}{11}
+\beamer@sectionintoc {12}{Diagonalilzação de Matrizes Simétricas}{181}{0}{12}
