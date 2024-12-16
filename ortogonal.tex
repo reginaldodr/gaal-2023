@@ -38,20 +38,35 @@ onde $\delta_{ij}$ é o chamado {\color{blue}Delta de Kronecker}.
 \end{frame}
 
 \begin{frame}[label=orto]{}
-\begin{teo}
-Se $\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}$  de $\R^n$  é ortogonal, então esses vetores são LI. Além disso, se
-\[\vec{v}=c_1\vec{v}_1+c_2\vec{v}_2+\cdot +c_k\vec{v}_k,\]
+%\begin{teo}
+Se $\{{\color{blue}\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k}\}$  de $\R^n$  é ortogonal, então esses vetores são LI. Além disso, se
+\begin{equation}\label{eq-proj}
+{\color{red}\vec{v}}=c_1{\color{blue}\vec{v}_1}+c_2{\color{blue}\vec{v}_2}+\cdots +c_k{\color{blue}\vec{v}_k},
+\end{equation}
 então
-\[c_i=\frac{\vec{v}\cdot \vec{v}_i}{\|\vec{v}_i\|^2}\] 
-\end{teo}
+\[c_i=\frac{{\color{red}\vec{v}}\cdot{\color{blue} {\color{blue}\vec{v}_i}}}{\|{\color{blue}\vec{v}_i}\|^2}\] 
+%\end{teo}
 
 \begin{defin}
-Definimos a {\color{blue}projeção ortogonal} de um $\vec{v}$ sobre um vetor  {\color{red} não nulo} $\vec{w}$ como sendo o seguinte vetor
-\[\proj_{\vec{w}}\vec{v}=\left(\frac{\vec{v}\cdot \vec{w}}{\|\vec{w}\|^2}\right)\vec{w}.\]
+Definimos a {\color{blue}projeção ortogonal} de um {\color{red}$\vec{v}$} sobre um vetor  {\color{red} não nulo} {\color{blue}$\vec{w}$} como sendo o seguinte vetor
+\[\proj_{{\color{blue}\vec{w}}}{\color{red}\vec{v}}=
+\left(\frac{ {\color{red}\vec{v}}\cdot
+{\color{blue}\vec{w}} }{\|{\color{blue}\vec{w}}\|^2}\right)
+{\color{blue}\vec{w}}.
+\]
 \end{defin}
+Com esta notação, temos que a identidade \eqref{eq-proj} se escreve como
+\[{\color{red}\vec{v}}=\proj_{{\color{blue}\vec{v}_1}}{\color{red}\vec{v}}+\proj_{{\color{blue}\vec{v}_2}}{\color{red}\vec{v}}+\cdots +\proj_{{\color{blue}\vec{v}_k}}{\color{red}\vec{v}}.\]
+\end{frame}
 
+\begin{frame}[label=orto]{}
+
+\begin{exe}
+Mostre $\vec{v}_1=(0,2,0)$, $\vec{v}_2=(3,0,3)$ e $\vec{v}_3=(-4,0,4)$ formam uma base ortgonal de $\R^3$. Expresse $\vec{v}=(1,2,4)$ como uma combinação linear deles. 
+\end{exe}
 
 \end{frame}
+
 
 %\begin{frame}[label=orto]{Processo de Ortogonalização de Gram-Schimidt}
 %\begin{prop}
@@ -190,36 +205,4 @@ Encontre  uma diagonalização ortogonal para a matriz
 \]
 \end{exe}
 
-\end{frame}
-
-
-
-\subsection*{Coordenadas em relação a uma base de $\R^n$}
-\begin{frame}[label=lild]{Coordenadas em relação a uma base}
-Se ${\color{red}\mathcal{B}=\{\vec{v}_1,\vec{v}_2,\ldots,\vec{v}_n\}}$ é uma base de $\R^n$, então cada vetor $\vec{v}\in \R^n$ pode ser escrito de forma única como
-\[\vec{v}={\color{blue}c_1}{\color{red}\vec{v}_1}+{\color{blue}c_2}{\color{red}\vec{v}_2}+\cdots+{\color{blue}c_n}{\color{red}\vec{v}_n}.\]
-Neste caso, dizemos que esta é a {\color{blue}expressão de $\vec{v}$ em termos da base $\mathcal{B}$}. Os escalares {\color{blue}$c_1,c_2,\ldots,c_n$} são chamados de {\color{blue}coordenadas} de $\vec{v}$ em relação à base $\mathcal{B}$ e escrevemos 
-\[
-[\vec{v}]_{{\color{red}\mathcal{B}}}=
-{\color{blue}(c_1,c_2,\ldots,c_n)}_{{\color{red}\mathcal{B}}} \text{ ou }
-[\vec{v}]_{{\color{red}\mathcal{B}}}=
-{\color{blue}
-\begin{bmatrix}
-c_1 \\ c_2 \\ \vdots \\ c_n
-\end{bmatrix}_{{\color{red}\mathcal{B}}}},
-\]
-chamado {\color{blue}vetor de coordenadas em relação à base $\mathcal{B}$}.
-
-\end{frame}
-
-\begin{frame}[label=lild]{}
-\begin{exe}
-\begin{enumerate}
-%\item Determine as coordenadas do vetor $\vec{v}=(-1,2,1)$ em relação à base $\mathcal{B}=\{(1,0,1),(0,1,1)\}$ do espaço gerado por $\mathcal{B}$.
-
-\item Determine as coordenadas do vetor $\vec{v}=(2,-1,3)$ em relação à base canônica do $\R^3$, $\mathcal{C}=\{\vec{e}_1,\vec{e}_2,\vec{e}_3\}$.
-
-\item Mostre que $\mathcal{B}=\{(1,2,1),(2,9,0),(3,3,4)\}$ é uma base de $\R^3$. Em seguida, encontre o vetor de coordenadas de $\vec{v}=(5,-1,9)$ em relação a essa base.
-\end{enumerate}
-\end{exe}
 \end{frame}
