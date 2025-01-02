@@ -152,15 +152,42 @@ Seja $Q$ uma matriz $m\times n$. Suas colunas formam um conjunto ortogonal se,
 e somente se, $Q^TQ=I_n$. Em particular, $Q$ é ortogonal se, e somente se, $Q^{-1}=Q^T$.
 \end{teo}
 
-\begin{exe}
-Mostre que  a seguinte matriz de rotação é ortogonal.
+
+
+\end{frame}
+
+
+
+
+\subsection*{Matriz de Rotação}
+\begin{frame}[label=orto]{Matriz de Rotação}
+A seguinte matriz, conhecida por \dt{Matriz de Rotação}, gira um vetor do plano por um ângulo $\theta$ no sentido anti-horário.
 \[R_\theta= 
 \begin{bmatrix}
 \cos(\theta) & -\sen(\theta)\\
 \sen(\theta) & \cos(\theta)
 \end{bmatrix}
 \]
+
+\begin{exe}
+Mostre que a matriz de rotação é uma matriz ortogonal e calcule sua inversa. Qual o efeito geométrico da inversa?
 \end{exe}
+
+\end{frame}
+
+\begin{frame}[label=orto]
+\begin{casa}
+\begin{enumerate}
+\item Calcule as matrizes de rotação para $\theta=\frac{\pi}{3},\frac{\pi}{4}, \frac{\pi}{2}$.
+
+\item Qual o ângulo da seguinte matriz de rotação
+\[
+\begin{bmatrix}
+\frac{2}{\sqrt{5}} & -\frac{1}{\sqrt{5}} \\[1em] \frac{1}{\sqrt{5}} & \frac{2}{\sqrt{5}}
+\end{bmatrix}
+\]
+\end{enumerate}
+\end{casa}
 
 \end{frame}
 
