@@ -249,15 +249,16 @@ plot ({\b*sinh(\t)},{-\a*cosh(\t )});
 \bigskip
 \bigskip
 
-\qquad\begin{minipage}{0.5\textwidth}
-\quad
+
+\qquad\quad\begin{minipage}{0.5\textwidth}
+\qquad\quad
 {\footnotesize {\color{red}\fbox{$\displaystyle x=ay^2, \ a>0$}}}
 
 
-\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.7}]
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.7}]	
 \def\p{1}	
 \draw[scale=1,domain=-2.5:2.5,smooth,variable=\t,red,thick]
-	plot ({-\t*\t/(4*\p)},{\t});
+	plot ({\t*\t/(4*\p)},{\t});
 \draw[thick,->] (-2.5,0) -- (2,0) node[below] {$x$};
 \draw[thick,->] (0,-2.5) -- (0,2.5) node[left] {$y$}; 
 \draw[fill,red] (0,0) circle (1.5pt);
@@ -266,14 +267,14 @@ plot ({\b*sinh(\t)},{-\a*cosh(\t )});
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
-\qquad\quad
+\quad
 {\footnotesize {\color{red}\fbox{$\displaystyle x=-ay^2, \ a>0$}}}
 
 
-\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.7}]	
+\begin{tikzpicture}[scale=0.5, every node/.style={scale=0.7}]
 \def\p{1}	
 \draw[scale=1,domain=-2.5:2.5,smooth,variable=\t,red,thick]
-	plot ({\t*\t/(4*\p)},{\t});
+	plot ({-\t*\t/(4*\p)},{\t});
 \draw[thick,->] (-2.5,0) -- (2,0) node[below] {$x$};
 \draw[thick,->] (0,-2.5) -- (0,2.5) node[left] {$y$}; 
 \draw[fill,red] (0,0) circle (1.5pt);
